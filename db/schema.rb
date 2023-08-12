@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_194753) do
 
   create_table "facilities", force: :cascade do |t|
     t.string "facility_name"
-    t.integer "facility_phone_number"
+    t.string "facility_phone_number"
     t.string "facility_location"
     t.string "facility_description"
     t.string "role", default: "admin"
@@ -53,7 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_194753) do
     t.string "first_name"
     t.string "last_name"
     t.date "due_date"
-    t.integer "phone_number"
+    t.string "phone_number"
     t.string "role", default: "user"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

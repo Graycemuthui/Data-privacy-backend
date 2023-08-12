@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :first_name
       t.string :last_name
       t.date   :due_date
-      t.integer :phone_number
+      t.string :phone_number
       t.string :role , default: "user"
 
       t.timestamps
