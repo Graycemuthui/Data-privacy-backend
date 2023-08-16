@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
-  validates :email, uniqueness: true
-  validates :password, length: { minimum: 6 }
   has_many :appointments, dependent: :destroy
   has_many :reminders, dependent: :destroy
-  has_one :facility, class_name: 'Facility'
+  belongs_to :facility
+
+  validates :email, presence: true, uniqueness: true
 end
