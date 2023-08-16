@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :users, only: %i[create index]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
+      root 'home#index'
     end
   end
 end
